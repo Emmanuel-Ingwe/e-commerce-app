@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { commerce } from "./lib/commerce";
 
 const App = () => {
@@ -8,6 +8,11 @@ const App = () => {
 		const response = await commerce.products.list();
 		setProducts((response && response.data) || []);
 	};
+
+	useEffect(() => {
+		fetchProducts();
+	}, []);
+
 	return <div className='App'>App Co,</div>;
 };
 
