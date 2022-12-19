@@ -4,7 +4,7 @@ const Products = ({ products }) => {
 	return (
 		<div>
 			{products.map((product) => {
-				<h1>{product.name}</h1>;
+				return <h1>{product.name}</h1>;
 			})}
 		</div>
 	);
