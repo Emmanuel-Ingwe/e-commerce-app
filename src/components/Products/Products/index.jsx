@@ -1,11 +1,20 @@
+import { Grid, Container } from "@material-ui/core";
 import Product from "../Product";
 
 const Products = ({ products }) => {
 	return (
 		<div>
-			{products.map((product) => {
-				return <Product product={product} />;
-			})}
+			<Container id='products'>
+				<Grid container spacing={4}>
+					{products.map((product) => {
+						return (
+							<Grid key={product.id} item xs={12} sm={6} md={4}>
+								<Product product={product} />;
+							</Grid>
+						);
+					})}
+				</Grid>
+			</Container>
 		</div>
 	);
 };
