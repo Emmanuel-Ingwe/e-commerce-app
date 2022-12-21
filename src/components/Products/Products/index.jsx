@@ -1,10 +1,11 @@
 import { Grid, Container } from "@material-ui/core";
 import Product from "../Product";
+import "./style.css";
 
 const Products = ({ products }) => {
 	return (
 		<div>
-			<Container id='products'>
+			<Container className='products-spacing__mb ' id='products'>
 				<Grid container spacing={4}>
 					{products.map((product) => {
 						return (

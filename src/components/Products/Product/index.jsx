@@ -18,7 +18,7 @@ const Product = ({ product, addProduct = () => {} }) => (
 				alt='Contemplative Reptile'
 				height='260'
 				className='card-image'
-				image={product.media.source}
+				image={product?.image?.url}
 				title='Contemplative Reptile'
 			/>
 			<CardContent className='content'>
@@ -44,3 +44,5 @@ const Product = ({ product, addProduct = () => {} }) => (
 		</CardActions>
 	</Card>
 );
+
+export default Product;

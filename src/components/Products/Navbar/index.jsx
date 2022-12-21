@@ -16,7 +16,7 @@ const NavBar = ({ basketItems, totalCost }) => {
 
 	return (
 		<>
-			<AppBar position='fixed' className='custom-navbar'>
+			<AppBar position='fixed' className='custom-navbar '>
 				<Container>
 					<Toolbar>
 						<Typography
@@ -45,7 +45,10 @@ const NavBar = ({ basketItems, totalCost }) => {
 									to='/basket'
 									aria-label='Show basket contents'
 									color='inherit'>
-									<Badge badgeContent={basketItems} color='secondary'>
+									<Badge
+										overlap='rectangular'
+										badgeContent={basketItems}
+										color='secondary'>
 										<ShoppingCart className='custom-basket' />
 									</Badge>
 								</IconButton>

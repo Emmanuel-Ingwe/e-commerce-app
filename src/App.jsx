@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { commerce } from "./lib/commerce";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import Products from "./components/Products/Products";
+import NavBar from "./components/Products/Navbar";
 
 const App = () => {
 	const [products, setProducts] = useState([]);
@@ -15,16 +17,16 @@ const App = () => {
 		fetchProducts();
 	}, []);
 
+	console.log(products);
 	return (
-		<Router>
+		<>
 			<div>
-				<Switch>
-					<Route exact path='/'>
-						<Products products={products} />
-					</Route>
-				</Switch>
+				<NavBar />
+				<Routes>
+					<Route path='/' element={<Products products={products} />} />
+				</Routes>
 			</div>
-		</Router>
+		</>
 	);
 };
 
