@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
+import logo from "./img/logo.jpg";
 
 import "./style.css";
 
@@ -25,12 +26,7 @@ const NavBar = ({ basketItems, totalCost }) => {
 							variant='h6'
 							className='custom-title'
 							color='inherit'>
-							<img
-								src='https://github.com/DwinaTech/public-images/blob/main/DwinaTech-brand.png?raw=true'
-								alt='DwinaTech logo'
-								height='25px'
-								className='logo'
-							/>
+							<img src={logo} alt='logo' height='25px' className='logo' />
 						</Typography>
 						{location.pathname === "/basket" ? (
 							<div className='basket-wrapper'>
